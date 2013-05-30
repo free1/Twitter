@@ -1,3 +1,4 @@
+#encoding: utf-8
 class SessionsController < ApplicationController
 	
 	def new
@@ -10,7 +11,7 @@ class SessionsController < ApplicationController
 			sign_in user
 			redirect_back_or user
 		else
-			flash.now[:error] = 'Invalid email/password combination'
+			flash.now[:error] = '无效的同户名／密码！'
 			render 'new'	
 		end
 	end
